@@ -9,7 +9,7 @@ import {
   CalendarDays,
   Phone,
 } from "lucide-react";
-import logo from "../assets/logo.svg";
+
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -44,17 +44,10 @@ function Navbar() {
           dir="rtl"
           className="max-w-7xl mx-auto flex items-center justify-between px-8 py-6"
         >
+        
           {/* Logo */}
-          {/* Logo */}
-<div className="flex items-center gap-3 cursor-pointer">
+<div className="text-right cursor-pointer">
 
-  <img
-    src={logo}
-    alt="ورد"
-    className="w-10 h-10"
-  />
-
-  <div className="text-right">
     <div className="w-12 h-[2px] bg-[#556B5D] mb-2 ml-auto"></div>
 
     <h1 className="text-4xl font-semibold tracking-wide text-[#556B5D]">
@@ -62,7 +55,6 @@ function Navbar() {
     </h1>
   </div>
 
-</div>
 
           {/* Desktop Menu */}
           <ul className="hidden lg:flex items-center gap-14 text-[17px] font-medium text-[#2E2A27]">
