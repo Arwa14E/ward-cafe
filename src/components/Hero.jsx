@@ -14,12 +14,14 @@ function Hero() {
           alt="ورد"
           initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{
+  duration: 1.8,
+  ease: "easeOut",
+}}
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/20"></div>
-
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/35"></div>
       </div>
 
       {/* Hero Content */}
@@ -64,37 +66,49 @@ function Hero() {
           viewport={{ once: true }}
           className="mt-8 text-xl leading-10 text-[#6D655D] max-w-2xl mx-auto"
         >
-          استمتع بقهوة مختصة في مساحة صُممت بعناية،
-          لتمنحك لحظة هادئة تستحقها
+          كل كوب يُحضّر بعناية，
+ليمنحك لحظة هادئة تستحقها
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: .7, delay: .6 }}
-          viewport={{ once: true }}
-          className="mt-12"
-        >
+  initial={{ opacity: 0, y: 35 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: .7, delay: .6 }}
+  viewport={{ once: true }}
+  className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-5"
+>
 
-          <a
-            href="#menu"
-            className="inline-block bg-[#556B5D] text-white px-10 py-4 rounded-full hover:bg-[#465A4D] transition shadow-lg hover:shadow-xl"
-          >
-            استكشف القائمة
-          </a>
+  <a
+    href="#menu"
+    className="inline-flex items-center justify-center bg-[#556B5D] text-white px-10 py-4 rounded-full hover:bg-[#465A4D] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+  >
+    استكشف القائمة
+  </a>
 
-        </motion.div>
+  <a
+    href="/Ward_Menu_A4.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center border-2 border-[#556B5D] text-[#556B5D] px-10 py-4 rounded-full hover:bg-[#556B5D] hover:text-white transition-all duration-300 hover:scale-105"
+  >
+     تحميل القائمة PDF
+  </a>
 
-        <motion.div
-          animate={{ y: [0, 12, 0] }}
-          transition={{
-            duration: 1.6,
-            repeat: Infinity,
-          }}
-          className="mt-16 text-[#556B5D] text-3xl"
-        >
-          ↓
-        </motion.div>
+</motion.div>
+
+        <motion.a
+  href="#features"
+  animate={{ y: [0, 12, 0] }}
+  transition={{
+    duration: 1.6,
+    repeat: Infinity,
+  }}
+  className="mt-16 block text-[#556B5D] text-3xl hover:text-[#435449] transition"
+>
+  ↓
+</motion.a>
+
+
 
       </div>
 
