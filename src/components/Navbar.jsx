@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import {
   Menu,
-  Search,
   X,
   House,
   Coffee,
@@ -81,10 +80,7 @@ function Navbar() {
 
           {/* Left Icons */}
           <div className="flex items-center gap-5">
-            <button className="hover:text-[#556B5D] transition duration-300">
-              <Search size={23} />
-            </button>
-
+            
             <button
               onClick={() => setMenuOpen(true)}
               className="lg:hidden hover:text-[#556B5D] transition duration-300"
